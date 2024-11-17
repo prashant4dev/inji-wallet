@@ -174,6 +174,7 @@ export const getSelectedCredentialTypeDetails = (
   for (let credential in wellknown.credential_configurations_supported) {
     const credentialDetails =
       wellknown.credential_configurations_supported[credential];
+    return credentialDetails;
     if (
       JSON.stringify(credentialDetails.credential_definition.type) ===
       JSON.stringify(vcCredentialTypes)

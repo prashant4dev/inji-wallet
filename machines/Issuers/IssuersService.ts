@@ -82,6 +82,19 @@ export const IssuersService = () => {
       );
 
       console.info(`VC download via ${context.selectedIssuerId} is successful`);
+      if (credential.credential.credentialSubject.name) {
+        credential.credential.credentialSubject.fullName =
+          credential.credential.credentialSubject.name;
+      }
+      console.log(
+        'credential.credential.id>>>>>>>>>>',
+        credential.credential.id,
+      );
+      if (credential.credential.id) {
+        credential.credential.id = credential.credential.id
+          .split(':')
+          .reverse()[0];
+      }
       return updateCredentialInformation(context, credential);
     },
     invokeAuthorization: async (context: any) => {

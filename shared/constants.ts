@@ -8,8 +8,8 @@ import {
 import {Argon2iConfig} from './commonUtil';
 import {VcIdType} from '../machines/VerifiableCredential/VCMetaMachine/vc';
 
-export let MIMOTO_BASE_URL = MIMOTO_HOST;
-export let ESIGNET_BASE_URL = ESIGNET_HOST;
+export let MIMOTO_BASE_URL = 'https://dev.credissuer.com/mimoto';
+export let ESIGNET_BASE_URL = 'https://dev.credissuer.com/esignet';
 export let DEBUG_MODE_ENABLED = DEBUG_MODE === 'true';
 
 export const LIVENESS_CHECK = LIVENESS_DETECTION === 'true';
